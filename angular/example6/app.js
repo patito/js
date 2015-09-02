@@ -1,6 +1,10 @@
 (function () {
   var app = angular.module('gemStore', []);
 
+  app.controller('StoreController', function() {
+    this.products = gems;
+  });
+
   var gems = [{
     name: 'Azurite',
     description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
@@ -10,9 +14,9 @@
     color: '#CCC',
     faces: 14,
     images: [
+      "images/gem-01.gif",
       "images/gem-02.gif",
-      "images/gem-02.gif",
-      "images/gem-02.gif"
+      "images/gem-03.gif"
     ]
   }, {
     name: 'Bloodstone',
@@ -23,9 +27,9 @@
     color: '#EEE',
     faces: 12,
     images: [
+      "images/gem-01.gif",
       "images/gem-02.gif",
-      "images/gem-02.gif",
-      "images/gem-02.gif"
+      "images/gem-03.gif"
     ]
   }, {
     name: 'Zircon',
@@ -36,13 +40,9 @@
     color: '#000',
     faces: 6,
     images: [
+      "images/gem-01.gif",
       "images/gem-02.gif",
-      "images/gem-02.gif",
-      "images/gem-02.gif"
+      "images/gem-03.gif"
     ]
   }];
-
-  app.controller('StoreController', function () {
-    this.products = gems;
-  });
 }());
